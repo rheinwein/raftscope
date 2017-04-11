@@ -2,6 +2,33 @@ body {
   font-size: 16pt;
 }
 
+body header {
+  width: 100%;
+  color: white;
+  background-color: #1799D3;
+  overflow: hidden;
+  padding: 25px;
+  margin-bottom: 40px;
+}
+
+body header h1 {
+  margin: 0;
+  float: left;
+  width: 49%;
+}
+
+body header span {
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+  float: right;
+  width: 49%;
+}
+
+body > div.container {
+  max-width: 780px;
+}
+
 #modal-details {
   font-size: 12pt;
 }
@@ -23,6 +50,10 @@ textarea#title {
  max-height: 3.1ex;
  font-weight: bold;
  margin-top: 10px;
+}
+
+svg:first-of-type {
+  margin-bottom: 40px;
 }
 
 svg a:hover {
@@ -89,13 +120,13 @@ svg .message {
 }
 
 svg .message.RequestVote {
-  fill:   #66c2a5;
-  stroke: #66c2a5;
+  fill:   #5BCE65;
+  stroke: #5BCE65;
 }
 
 svg .message.AppendEntries {
-  fill:   #fc8d62;
-  stroke: #fc8d62;
+  fill:   #F89E15;
+  stroke: #F89E15;
 }
 
 svg .message.request circle {
@@ -182,7 +213,7 @@ a#time-button  {
 
 .slide ol {
   font-weight: bold;
-  color: #428bca;
+  color: #1799D3;
 }
 
 
@@ -190,7 +221,7 @@ a#time-button  {
   font-size:20pt;
   font-weight: bold;
   line-height: 16pt;
-  color: #428bca;
+  color: #1799D3;
 }
 
 .slide li p {
@@ -234,9 +265,17 @@ a#time-button  {
 .slide h5,
 .slide h6,
 .blue {
-  color: #428bca;
+  color: #1799D3;
 }
 
 .slide .gray {
   color: #333;
+}
+
+.slider-track {
+  background: #EEE;
+}
+
+.slider-selection {
+  background: #999;
 }

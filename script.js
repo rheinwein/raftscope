@@ -37,12 +37,12 @@ state = makeState({
 var sliding = false;
 
 var termColors = [
-  '#66c2a5',
-  '#fc8d62',
-  '#8da0cb',
-  '#e78ac3',
-  '#a6d854',
-  '#ffd92f',
+  '#FF8AD8',
+  '#5BCE65',
+  '#1799D3',
+  '#EB451B',
+  '#B831E7',
+  '#F8BE0B ',
 ];
 
 var SVG = function(tag) {

@@ -15,10 +15,14 @@
     <script src="state.js"></script>
     <script src="script.js"></script>
     <script src="atc14recordings.js"></script>
-    <script src="atc14.js"></script>
+    <script src="dockercon2017.js"></script>
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <h1> Raftscope Visualization</h1>
+      <span>🍴github.com/ongardie/raftscope</span>
+    </header>
     <div class="container">
       <div class="row" style="margin-top: 20px">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="border: 0px solid black" width="745" height="400">
@@ -45,12 +49,12 @@
         </svg>
       </div>
       <div class="row" style="margin-top: 20px">
-        <a id="time-button" href="#"><span id="time-icon" class="glyphicon glyphicon-time" style="font-size: 24pt; vertical-align: middle" data-toggle="tooltip" title="Timeline; click to pause/play"></span></a>
+        <a id="time-button" href="#"><span id="time-icon" class="glyphicon glyphicon-time" style="font-size: 24px; vertical-align: middle" data-toggle="tooltip" title="Timeline; click to pause/play"></span></a>
         &nbsp;&nbsp;
         <input id="time" style="width: 650px" data-slider-id='timeSlider' type="text" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="0" />
       </div>
       <div class="row" style="margin-top: 20px">
-        <span id="speed-icon" class="glyphicon glyphicon-dashboard" style="font-size: 24pt; vertical-align: middle" data-toggle="tooltip" title="Simulation speed"></span>
+        <span id="speed-icon" class="glyphicon glyphicon-dashboard" style="font-size: 24px; vertical-align: middle" data-toggle="tooltip" title="Simulation speed"></span>
         &nbsp;&nbsp;
         <input id="speed" style="width: 650px"  data-slider-id='speedSlider' type="text" data-slider-min="0" data-slider-max="3" data-slider-step=".01" data-slider-value="2" />
       </div>
