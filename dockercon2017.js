@@ -123,8 +123,11 @@ safetys = function() {
 };
 
 leaderElection = function() {
+  console.log('leader election starting')
   replay('leader election', logReplication);
-  // state.schedule(182000, playback.pause);
+
+  state.schedule(     1, playback.pause);
+  state.schedule(182000, playback.pause);
   // state.schedule(276000, playback.pause);
   // state.schedule(289000, playback.pause);
   state.schedule(327000, playback.pause);
@@ -139,31 +142,33 @@ leaderElection = function() {
   // state.schedule(596000, playback.pause);
 };
 
-// logReplication = function() {
-//   $('.logs').show();
-//   heading('Log Replication');
-//   replay('log replication', playback.pause);
-//   state.schedule(     1, playback.pause);
-//   state.schedule( 28000, playback.pause);
-//   state.schedule(131000, playback.pause);
-//   state.schedule(176000, playback.pause);
-//   state.schedule(280000, playback.pause);
-//   state.schedule(281000, function() {
-//     heading('Log Replication', 'Repairing Inconsistencies');
-//   });
-//   state.schedule(282000, function() {
-//     state.seek(397000);
-//     playback.pause();
-//   });
-//   state.schedule(413000, playback.pause);
-//   state.schedule(567000, playback.pause);
-//   state.schedule(568000, function () {
-//     state.seek(647000);
-//   });
-//   state.schedule(650000, playback.pause);
-//   state.schedule(697000, playback.pause);
-//   state.schedule(698000, safety);
-// };
+logReplication = function() {
+  console.log('log replication starting')
+  $('.logs').show();
+  // heading('Log Replication');
+  replay('log replication', playback.pause);
+  state.schedule(     1, playback.pause);
+  state.schedule( 28000, playback.pause);
+  state.schedule(131000, playback.pause);
+  state.schedule(176000, playback.pause);
+  state.schedule(280000, playback.pause);
+  state.schedule(281000, function() {
+    heading('Log Replication', 'Repairing Inconsistencies');
+  });
+  state.schedule(282000, function() {
+    state.seek(397000);
+    playback.pause();
+  });
+  state.schedule(413000, playback.pause);
+  state.schedule(567000, playback.pause);
+  state.schedule(568000, function () {
+    state.seek(647000);
+  });
+  state.schedule(650000, playback.pause);
+  state.schedule(697000, playback.pause);
+  state.schedule(698000, safety);
+  console.log('log replication ending')
+};
 
 // safety = function() {
 //   replay('log replication', safetys);
